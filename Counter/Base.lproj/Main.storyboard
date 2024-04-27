@@ -78,11 +78,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="clearBtn" destination="jxY-hr-DEd" id="gvB-XH-TdZ"/>
-                        <outlet property="counterLbl" destination="VSn-Ah-xB5" id="xt2-ro-qyV"/>
-                        <outlet property="historyLbl" destination="ChF-Ap-oWB" id="RXX-sp-Yu6"/>
-                        <outlet property="minusOneBtn" destination="piC-oO-Gtn" id="fXt-Z7-IXD"/>
-                        <outlet property="plusOneBtn" destination="Q7F-nv-FRM" id="C8C-mT-4DG"/>
+                        <outlet property="cleanButton" destination="jxY-hr-DEd" id="gvB-XH-TdZ"/>
+                        <outlet property="counterLabel" destination="VSn-Ah-xB5" id="xt2-ro-qyV"/>
+                        <outlet property="historyLabel" destination="ChF-Ap-oWB" id="RXX-sp-Yu6"/>
+                        <outlet property="minusOneButton" destination="piC-oO-Gtn" id="fXt-Z7-IXD"/>
+                        <outlet property="plusOneButton" destination="Q7F-nv-FRM" id="C8C-mT-4DG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

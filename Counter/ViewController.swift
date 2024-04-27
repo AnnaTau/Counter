@@ -8,17 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     private var counter: Int = 0 {
         didSet {
-            counterLbl.text = "\(counter)"
+            counterLabel.text = "\(counter)"
         }
     }
     private var history: String = "История изменений:\n" {
         didSet {
-            historyLbl.text = history
-            let range = NSMakeRange(historyLbl.text.count - 1, 0)
-            historyLbl.scrollRangeToVisible(range)
+            historyLabel.text = history
+            let range = NSMakeRange(historyLabel.text.count - 1, 0)
+            historyLabel.scrollRangeToVisible(range)
         }
     }
     private var time: String {
@@ -28,24 +28,23 @@ class ViewController: UIViewController {
         let someDateTime = formatter.string(from: currentDateTime)
         return "\(someDateTime)"
     }
-    
-    @IBOutlet weak var counterLbl: UILabel!
-    @IBOutlet weak var plusOneBtn: UIButton!
-    @IBOutlet weak var minusOneBtn: UIButton!
-    @IBOutlet weak var clearBtn: UIButton!
-    @IBOutlet weak var historyLbl: UITextView!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var plusOneButton: UIButton!
+    @IBOutlet private weak var minusOneButton: UIButton!
+    @IBOutlet private weak var cleanButton: UIButton!
+    @IBOutlet private weak var historyLabel: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        historyLbl.text = history
+        historyLabel.text = history
     }
-
-    @IBAction func plusOne() {
+    
+    @IBAction private func plusOne() {
         counter += 1
         history += "[\(time)]: значение изменено на +1\n"
     }
     
-    @IBAction func minusOne() {
+    @IBAction private func minusOne() {
         if counter > 0 {
             counter -= 1
             history += "[\(time)]: значение изменено на -1\n"
@@ -55,10 +54,9 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func clearCounter() {
+    @IBAction private func clearCounter() {
         counter = 0
         history += "[\(time)]: значение сброшено\n"
     }
-    
 }
 
